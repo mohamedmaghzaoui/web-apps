@@ -1,1 +1,0 @@
-let value=document.querySelector('h1');

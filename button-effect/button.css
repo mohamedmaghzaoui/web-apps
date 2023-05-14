@@ -1,0 +1,55 @@
+*{
+    padding: 0;
+    margin: 0;
+
+}
+body{
+    background-color:#F0F8FF
+}
+button{
+    width: 130px;
+    height: 60px;
+    border-radius: 5%;
+    background-color: 	#F3B5D2;
+    border:#F3B5D2;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    
+    position: fixed;
+    left: 50%;
+    top: 40%;
+    overflow: hidden;
+    
+    
+
+}
+
+button span{
+    color: black;
+    font-size: larger;
+    font-weight: bold;
+    font-family: 'Courier New', Courier, monospace;
+    position: relative;
+    z-index: 1;
+  } 
+
+button::before {
+    content: "";
+    position: absolute;
+    top: var(--posy);
+    left: var(--posx);
+    width: 0px;
+    height: 0px;
+    transform: translate(-50%,-50%);
+    
+    background-color: orangered;
+    
+    transition: width 0.6s,height 0.6s;
+  }
+  button:hover::before{
+    width: 300px;
+    height: 300px;
+
+  }
+  
+
+  

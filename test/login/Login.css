@@ -1,0 +1,335 @@
+/*style for all elements*/
+* {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  margin: 0;
+  border: 0;
+  box-sizing: border-box;
+  font-weight: bold;
+  color: white;
+  position: relative;
+  list-style: none;
+  padding: 0;
+}
+/*body style*/
+body {
+  background: linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(98, 17, 128, 1) 35%,
+    rgba(0, 212, 255, 1) 100%
+  );
+}
+/*inform user that we are in account */
+#account {
+  color: gray;
+}
+/*navbar style and position*/
+.navbar {
+  background-color: #262626;
+  width: 100%;
+  height: 80px;
+  display: flex;
+  align-items: center;
+}
+
+.navbar li {
+  font-size: larger;
+  cursor: pointer;
+  margin-left: 20px;
+  color: #fff;
+  position: relative;
+}
+/*hoover style for navbar titles*/
+.navbar li::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #fff;
+  transition: width 0.3s;
+}
+
+.navbar li:hover::after {
+  width: 100%;
+}
+#account:hover::after {
+  display: none;
+}
+/*account position and height*/
+#account {
+  top: 15%;
+  height: 50px;
+}
+
+.navbar a {
+  text-decoration: none;
+}
+/*style for the submen */
+.navbar .sub-menu {
+  font-size: smaller;
+  display: none;
+  background-color: #262626;
+  padding: 10px;
+  border-radius: 10px;
+  left: 10%;
+  position: absolute;
+  left: 0;
+  z-index: 1;
+}
+/*display submenu only when hover*/
+.navbar li:hover .sub-menu {
+  display: block;
+}
+
+.navbar .sub-menu a {
+  display: block;
+  color: white;
+  margin-bottom: 5px;
+}
+/*username style */
+.username {
+  font-size: 20px;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  color: #fff;
+}
+/*login form style*/
+#first {
+  width: 300px;
+  height: 450px;
+  left: 40%;
+  top: 40px;
+  text-align: center;
+  background-color: #ffffff21;
+}
+h1 {
+  color: white;
+  font-size: 1.1cm;
+  margin: 4px;
+}
+
+input {
+  top: 40px;
+}
+p {
+  top: 170px;
+}
+input {
+  border: none;
+  border-bottom: 1px solid white;
+  background: none;
+  margin: 8px 0;
+}
+/*loginButton style*/
+#loginButton:hover {
+  cursor: pointer;
+}
+
+#sign:hover {
+  cursor: pointer;
+}
+#loginButton {
+  top: 80px;
+  width: 60%;
+  height: 40px;
+  background: linear-gradient(
+    to right,
+    #0a8fba,
+    #22c8eb,
+    #0bdfca,
+    lightblue,
+    #1fddbb
+  );
+  overflow: hidden;
+}
+/*sighn up button style and ripple effect*/
+button {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  width: 100px;
+  height: 40px;
+  left: 47%;
+  bottom: 20px;
+  border-radius: 5%;
+  background-color: #f3b5d2;
+  border: #f3b5d2;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+}
+
+button span {
+  color: black;
+  font-size: larger;
+  font-weight: bold;
+  font-family: "Courier New", Courier, monospace;
+  position: relative;
+  z-index: 1;
+}
+
+button::before {
+  content: "";
+  position: absolute;
+  top: var(--posy);
+  left: var(--posx);
+  width: 0px;
+  height: 0px;
+  transform: translate(-50%, -50%);
+  background-color: orangered;
+  transition: width 0.6s, height 0.6s;
+}
+button:hover::before {
+  width: 300px;
+  height: 300px;
+}
+button:hover {
+  cursor: pointer;
+}
+a {
+  text-decoration: none;
+}
+::placeholder {
+  color: #a9a9a9;
+}
+/*forget link style and position*/
+#forget {
+  top: 100px;
+  left: 20%;
+}
+#forget a {
+  text-decoration: underline;
+  color: #a9a9a9;
+}
+/*toggle password icon positon*/
+#togglePassword {
+  left: 40%;
+  bottom: 85px;
+}
+#first #togglePassword {
+  cursor: pointer;
+  display: inline;
+}
+/*  Devices (up to 480px) */
+@media (max-width: 480px) {
+  #first {
+    width: 90%;
+    left: 5%;
+    top: 40px;
+  }
+
+  h1 {
+    font-size: 1rem;
+  }
+
+  input,
+  textarea {
+    width: 100%;
+  }
+
+  button {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+/* Devices (481px - 768px) */
+@media (min-width: 481px) and (max-width: 768px) {
+  #first {
+    width: 90%;
+    left: 5%;
+    top: 40px;
+  }
+
+  h1 {
+    font-size: 1rem;
+  }
+}
+
+/* Devices (769px - 992px) */
+@media (min-width: 769px) and (max-width: 992px) {
+  #first {
+    width: 30%;
+    left: 37%;
+    top: 40px;
+  }
+
+  h1 {
+    font-size: 1.1rem;
+  }
+}
+
+/* Devices (993px - 1200px) */
+@media (min-width: 993px) and (max-width: 1200px) {
+  #first {
+    width: 30%;
+    left: 37%;
+    top: 40px;
+  }
+
+  h1 {
+    font-size: 1.1rem;
+  }
+}
+
+/* Devices (1201px and above) */
+@media (min-width: 1201px) {
+  #first {
+    width: 300px;
+    height: 450px;
+    left: 40%;
+    top: 40px;
+    text-align: center;
+    background-color: #ffffff21;
+  }
+
+  h1 {
+    font-size: 1.1cm;
+    margin: 4px;
+  }
+
+  input {
+    top: 40px;
+  }
+
+  p {
+    top: 170px;
+  }
+
+  input {
+    border: none;
+    border-bottom: 1px solid white;
+    background: none;
+    margin: 8px 0;
+  }
+
+  #loginButton {
+    top: 80px;
+    width: 60%;
+    height: 40px;
+  }
+
+  button {
+    left: 47%;
+    bottom: 20px;
+    width: 100px;
+    height: 40px;
+  }
+
+  button span {
+    font-size: larger;
+    font-weight: bold;
+    font-family: "Courier New", Courier, monospace;
+  }
+
+  button::before {
+    top: var(--posy);
+    left: var(--posx);
+  }
+
+  #forget {
+    top: 100px;
+    left: 20%;
+  }
+}

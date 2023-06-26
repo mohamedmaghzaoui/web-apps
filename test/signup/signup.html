@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>signup</title>
+    <link rel="stylesheet" href="sign_up.css">
+</head>
+
+<body>
+    <!--navbar-->
+    <ul class="navbar">
+        <li id="home"><a href="../todoList/Home.php">Home</a></li>
+
+        <li id="account">Account <span></span>
+            <ul class="sub-menu">
+                <a href="../login/loginInterface.php">
+                    <li>logout</li>
+                </a>
+                <a href="../signup/signup.html">
+                    <li>signup</li>
+                </a>
+            </ul>
+        </li>
+        <li id="list"><a href="../todoList/Add.php">Add</a></li>
+        <li id="contactUs">Your List</li>
+
+    </ul>
+    <!--sign form-->
+    <div class="sign_div">
+        <h1>Sign up</h1>
+        <form action="signup.php" method="post" novalidate onsubmit="return validateForm();">
+            <label for="username">Username:</label><br>
+            <input name="username" type="text" placeholder=" enter your username"><br>
+            <label for="password">Password:</label><br>
+            <input name="password" type="password" placeholder="enter your password"><br>
+            <label for="repeatPassword">Repeat password:</label><br>
+            <input name="repeatPassword" type="password" placeholder="repeat your password"><br>
+            <label for="">Email:</label><br>
+            <input type="email" name="email" : id="email" placeholder="enter your email"><br>
+            <label for="Gender">Gender</label><br>
+            <label for="Man">Man</label>
+            <input type="radio" name="gender" id="Man" value="Man">
+            <label for="Woman">Woman</label>
+            <input type="radio" name="gender" id="Woman" value="Woman"><br>
+            <input name="submit" id="submitButton" type="submit" value="submit">
+        </form>
+    </div>
+    <script src="validateSignup.js"></script> <!-- JavaScript file -->
+    </head>
+</body>
+
+</html>
